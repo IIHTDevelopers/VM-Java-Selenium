@@ -102,7 +102,7 @@ public class AutomationTest {
 				  String baseUrl = "https://www.yaksha.com/"; 
 				  String text = "Request"; 
 				  boolean isTextPresent = UITest.findByText(driver,baseUrl, text); 
-				  yakshaAssert(currentTest(), !isTextPresent, businessTestFile);
+				  yakshaAssert(currentTest(), isTextPresent, businessTestFile);
 			  }catch(Exception ex) { 
 				  yakshaAssert(currentTest(), false, businessTestFile); 
 			  } 
@@ -115,7 +115,7 @@ public class AutomationTest {
 				  	String baseUrl = "https://www.yaksha.com/"; 
 				  	String linkText = "View Assessments >>"; 
 				  	boolean isLinkExists = UITest.linkExists(driver, baseUrl, linkText); 
-				  	yakshaAssert(currentTest(), !isLinkExists, businessTestFile); 
+				  	yakshaAssert(currentTest(), isLinkExists, businessTestFile); 
 				  }catch(Exception ex) {
 					  yakshaAssert(currentTest(), false, businessTestFile); 
 				  } 
@@ -127,7 +127,7 @@ public class AutomationTest {
 				  	String baseUrl = "https://www.yaksha.com/"; 
 				  	String linkText = "View Assessments >>"; 
 				  	boolean isLinkClicked = UITest.linkClick(driver,baseUrl, linkText);
-				  	yakshaAssert(currentTest(), !isLinkClicked, businessTestFile); 
+				  	yakshaAssert(currentTest(), isLinkClicked, businessTestFile); 
 				  	}catch(Exception ex) { 
 				  		yakshaAssert(currentTest(), false, businessTestFile);
 				  	} 
